@@ -12,6 +12,7 @@
 		204EF829209B597600811E4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 204EF827209B597600811E4C /* Main.storyboard */; };
 		204EF82B209B597700811E4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 204EF82A209B597700811E4C /* Assets.xcassets */; };
 		204EF82E209B597800811E4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 204EF82C209B597800811E4C /* LaunchScreen.storyboard */; };
+		204EF838209B60AA00811E4C /* Spaceship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204EF837209B60AA00811E4C /* Spaceship.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		204EF82A209B597700811E4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		204EF82D209B597800811E4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		204EF82F209B597800811E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		204EF837209B60AA00811E4C /* Spaceship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spaceship.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,8 @@
 		204EF822209B597600811E4C /* M08_UF3_Practica_BMerelo_NOrdonez */ = {
 			isa = PBXGroup;
 			children = (
+				204EF836209B5FE800811E4C /* Models */,
+				204EF835209B5FD200811E4C /* Controllers */,
 				204EF823209B597600811E4C /* AppDelegate.swift */,
 				204EF825209B597600811E4C /* ViewController.swift */,
 				204EF827209B597600811E4C /* Main.storyboard */,
@@ -62,6 +66,21 @@
 				204EF82F209B597800811E4C /* Info.plist */,
 			);
 			path = M08_UF3_Practica_BMerelo_NOrdonez;
+			sourceTree = "<group>";
+		};
+		204EF835209B5FD200811E4C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		204EF836209B5FE800811E4C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				204EF837209B60AA00811E4C /* Spaceship.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				204EF838209B60AA00811E4C /* Spaceship.swift in Sources */,
 				204EF826209B597600811E4C /* ViewController.swift in Sources */,
 				204EF824209B597600811E4C /* AppDelegate.swift in Sources */,
 			);
