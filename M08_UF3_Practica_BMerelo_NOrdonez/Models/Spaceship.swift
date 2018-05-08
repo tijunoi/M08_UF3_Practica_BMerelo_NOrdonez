@@ -10,7 +10,7 @@ import UIKit
 
 class Spaceship: UIImageView {
     
-    let speed: CGFloat = 1.5
+    var speed: CGFloat = 1.5
     var moveToPoint:CGPoint?
     
     override init(image: UIImage?) {

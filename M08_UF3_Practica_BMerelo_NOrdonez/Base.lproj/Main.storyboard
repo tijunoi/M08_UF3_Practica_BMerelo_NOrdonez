@@ -52,7 +52,7 @@
         <!--Game View Controller-->
         <scene sceneID="xY7-fp-Sg8">
             <objects>
-                <viewController id="3Ob-5b-Vy9" userLabel="Game View Controller" sceneMemberID="viewController">
+                <viewController id="3Ob-5b-Vy9" userLabel="Game View Controller" customClass="GameViewController" customModule="M08_UF3_Practica_BMerelo_NOrdonez" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ngb-Hd-i6v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
