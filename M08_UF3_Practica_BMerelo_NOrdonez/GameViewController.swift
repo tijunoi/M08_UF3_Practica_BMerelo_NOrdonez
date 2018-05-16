@@ -29,7 +29,7 @@ class GameViewController: UIViewController {
         
         self.game = Game()
         let center = CGPoint(x: self.view.frame.midX, y: self.view.frame.maxY - spaceshipAltitude)
-        self.game?.player = Player(center: center, radius: 25, imageColor: UIColor.black)
+        self.game?.player = Player(center: center, radius: 25, imageName: "player")
         self.game?.player?.moveToPoint = self.game?.player?.imageView.center
         
         if let imagen = self.game?.player?.imageView {
@@ -72,7 +72,15 @@ class GameViewController: UIViewController {
     }
     
     @objc func updateScene(){
-        self.game?.player?.updateLocation()
+        self.game?.player?.updateLocation(self)
+    }
+
+    func gameAreaSize() -> CGSize {
+        return self.view.frame.size
+    }
+
+    func removeActor(_ actor: Actor) {
+        actor.imageView.removeFromSuperview()
     }
 
 

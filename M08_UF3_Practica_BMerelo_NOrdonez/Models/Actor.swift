@@ -38,8 +38,9 @@ class Actor {
         return distance<Float(self.radius + actor.radius)
     }
     
-    func updateLocation() {
+    func updateLocation(_ controller: GameViewController) {
         
     }
+
     
 }

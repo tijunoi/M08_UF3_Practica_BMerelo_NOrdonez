@@ -12,7 +12,7 @@ class Player: Actor{
     
     var moveToPoint:CGPoint?
 
-    override func updateLocation(){
+    override func updateLocation(_ controller: GameViewController){
         if let newPoint = moveToPoint{
             if !(newPoint.x == self.imageView.center.x) && !(newPoint.y==self.imageView.center.y) {
                 var center = self.imageView.center
@@ -32,5 +32,9 @@ class Player: Actor{
                 self.imageView.center = center
             }
         }
+    }
+
+    func afterCollision(actor: Actor, controller: GameViewController) {
+        controller.removeActor(actor)
     }
 }
