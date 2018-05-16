@@ -49,6 +49,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Score Table View Controller-->
+        <scene sceneID="wDe-6h-cW6">
+            <objects>
+                <tableViewController id="Tu3-yG-knv" customClass="ScoreTableViewController" customModule="M08_UF3_Practica_BMerelo_NOrdonez" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iiG-pT-10D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zwQ-Te-weH" customClass="ScoreCell" customModule="M08_UF3_Practica_BMerelo_NOrdonez" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zwQ-Te-weH" id="j4a-i5-xSF">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmm-0a-VQx">
+                                            <rect key="frame" x="16" y="12" width="343" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="qmm-0a-VQx" secondAttribute="bottom" constant="10.5" id="AMX-9m-mRz"/>
+                                        <constraint firstAttribute="trailing" secondItem="qmm-0a-VQx" secondAttribute="trailing" constant="16" id="Cd1-40-9sU"/>
+                                        <constraint firstItem="qmm-0a-VQx" firstAttribute="leading" secondItem="j4a-i5-xSF" secondAttribute="leading" constant="16" id="KOr-QN-s4d"/>
+                                        <constraint firstItem="qmm-0a-VQx" firstAttribute="top" secondItem="j4a-i5-xSF" secondAttribute="top" constant="12" id="hBi-XZ-GdJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="score" destination="qmm-0a-VQx" id="0vf-We-kKt"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Tu3-yG-knv" id="sjO-A2-ynb"/>
+                            <outlet property="delegate" destination="Tu3-yG-knv" id="jTY-9D-sDV"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sln-cW-bjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023.2" y="31.934032983508249"/>
+        </scene>
         <!--Game View Controller-->
         <scene sceneID="xY7-fp-Sg8">
             <objects>

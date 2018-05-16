@@ -16,6 +16,7 @@
 		204EF82B209B597700811E4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 204EF82A209B597700811E4C /* Assets.xcassets */; };
 		204EF82E209B597800811E4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 204EF82C209B597800811E4C /* LaunchScreen.storyboard */; };
 		204EF838209B60AA00811E4C /* Spaceship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204EF837209B60AA00811E4C /* Spaceship.swift */; };
+		E274D64720AC9DC8001009A4 /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E274D64620AC9DC8001009A4 /* ScoreTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		204EF82D209B597800811E4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		204EF82F209B597800811E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		204EF837209B60AA00811E4C /* Spaceship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spaceship.swift; sourceTree = "<group>"; };
+		E274D64620AC9DC8001009A4 /* ScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				2021E29E20AC96FB00BF1246 /* Game.swift */,
+				E274D64620AC9DC8001009A4 /* ScoreTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				204EF838209B60AA00811E4C /* Spaceship.swift in Sources */,
+				E274D64720AC9DC8001009A4 /* ScoreTableViewController.swift in Sources */,
 				204EF826209B597600811E4C /* GameViewController.swift in Sources */,
 				204EF824209B597600811E4C /* AppDelegate.swift in Sources */,
 				2021E29F20AC96FB00BF1246 /* Game.swift in Sources */,
