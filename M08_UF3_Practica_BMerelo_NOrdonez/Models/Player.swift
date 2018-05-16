@@ -11,7 +11,7 @@ import UIKit
 class Player: Actor{
     
     var moveToPoint:CGPoint?
-    
+
     override func updateLocation(){
         if let newPoint = moveToPoint{
             if !(newPoint.x == self.imageView.center.x) && !(newPoint.y==self.imageView.center.y) {

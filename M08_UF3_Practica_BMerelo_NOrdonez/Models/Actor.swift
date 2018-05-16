@@ -23,6 +23,14 @@ class Actor {
         self.speed = 8
     }
     
+    init(center: CGPoint, radius: CGFloat, imageName: String) {
+        self.radius = radius
+        let rect = CGRect(x: 0, y: 0, width: 50, height: 50)
+        self.imageView = UIImageView(image: UIImage(named: imageName))
+        self.imageView.frame = rect
+        self.imageView.center = center
+        self.speed = 8
+    }
     func overlapsWith(actor: Actor) -> Bool {
         let xdist = Float(abs(self.imageView.center.x-actor.imageView.center.x))
         let ydist = Float(abs(self.imageView.center.y-actor.imageView.center.y))
