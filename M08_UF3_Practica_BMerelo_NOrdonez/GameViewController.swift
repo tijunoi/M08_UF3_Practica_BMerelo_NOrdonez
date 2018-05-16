@@ -12,6 +12,8 @@ class GameViewController: UIViewController {
     
     var spaceshipAltitude: CGFloat = 150
     var spaceship: Spaceship?
+    
+    var game: Game?
     //Guardamos el display link para poder acceder en cada momento al frame rate, ya que varía segun el estado del dispositivo
     lazy var displayLink: CADisplayLink = CADisplayLink(target: self, selector: #selector(updateScene))
 
@@ -19,12 +21,20 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.spaceship = Spaceship(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        self.spaceship!.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.maxY - spaceshipAltitude)
-        self.spaceship?.backgroundColor = UIColor.black
-        self.spaceship!.moveToPoint = self.spaceship!.center
-        self.view.addSubview(self.spaceship!)
+//        self.spaceship = Spaceship(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+//        self.spaceship!.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.maxY - spaceshipAltitude)
+//        self.spaceship?.backgroundColor = UIColor.black
+//        self.spaceship!.moveToPoint = self.spaceship!.center
+//        self.view.addSubview(self.spaceship!)
         
+        self.game = Game()
+        let center = CGPoint(x: self.view.frame.midX, y: self.view.frame.maxY - spaceshipAltitude)
+        self.game?.player = Player(center: center, radius: 25, imageColor: UIColor.black)
+        self.game?.player?.moveToPoint = self.game?.player?.imageView.center
+        
+        if let imagen = self.game?.player?.imageView {
+            self.view.addSubview(imagen)
+        }
         
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(tapGestureDone(_:)))
         self.view.addGestureRecognizer(panGesture)
@@ -56,13 +66,13 @@ class GameViewController: UIViewController {
             if targetSpeed < 10 {
                 targetSpeed = 10
             }
-            self.spaceship?.speed = CGFloat(targetSpeed)
+            self.game?.player?.speed = CGFloat(targetSpeed)
         }
-        self.spaceship?.moveToPoint = tapPoint
+        self.game?.player?.moveToPoint = tapPoint
     }
     
     @objc func updateScene(){
-        self.spaceship?.updateLocation()
+        self.game?.player?.updateLocation()
     }
 
 
