@@ -14,17 +14,24 @@ class ScoreCell: UITableViewCell{
 }
 class ScoreTableViewController: UITableViewController {
 
-    var arrScores = HighScores()
+    var arrScores:HighScores? = HighScores()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        setUpScores()
+        
     }
+    
+    private func setUpScores(){
+        if let data = UserDefaults.standard.object(forKey: "SCORES_KEY") as? Data{
+            let decoder = PropertyListDecoder()
+            self.arrScores = try? decoder.decode(HighScores.self, from: data)
+            self.tableView.reloadData()
+        }
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -40,18 +47,20 @@ class ScoreTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return arrScores!.highscores.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "scoreCell", for: indexPath) as! ScoreCell
 
-        // Configure the cell...
+        
+        let score = arrScores!.highscores[indexPath.row]
+        cell.score.text = String(score)
 
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.

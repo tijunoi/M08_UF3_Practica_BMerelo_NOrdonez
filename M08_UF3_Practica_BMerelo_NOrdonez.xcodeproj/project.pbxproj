@@ -17,8 +17,8 @@
 		204EF829209B597600811E4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 204EF827209B597600811E4C /* Main.storyboard */; };
 		204EF82B209B597700811E4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 204EF82A209B597700811E4C /* Assets.xcassets */; };
 		204EF82E209B597800811E4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 204EF82C209B597800811E4C /* LaunchScreen.storyboard */; };
-		204EF838209B60AA00811E4C /* Spaceship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204EF837209B60AA00811E4C /* Spaceship.swift */; };
 		E274D64720AC9DC8001009A4 /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E274D64620AC9DC8001009A4 /* ScoreTableViewController.swift */; };
+		E2B4815F20ADD4E1008A7C8B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4815E20ADD4E1008A7C8B /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +34,8 @@
 		204EF82A209B597700811E4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		204EF82D209B597800811E4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		204EF82F209B597800811E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		204EF837209B60AA00811E4C /* Spaceship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spaceship.swift; sourceTree = "<group>"; };
 		E274D64620AC9DC8001009A4 /* ScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
+		E2B4815E20ADD4E1008A7C8B /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +85,7 @@
 				2021E29E20AC96FB00BF1246 /* Game.swift */,
 				E274D64620AC9DC8001009A4 /* ScoreTableViewController.swift */,
 				1AA1137D0A8BA8F1B0A485D5 /* GameViewController.swift */,
+				E2B4815E20ADD4E1008A7C8B /* MenuViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -92,7 +93,6 @@
 		204EF836209B5FE800811E4C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				204EF837209B60AA00811E4C /* Spaceship.swift */,
 				2001B15920A0E64C00665365 /* Actor.swift */,
 				2021E29C20AB33F100BF1246 /* Player.swift */,
 				1AA1102A9F8405395BC1F8F6 /* HighScores.swift */,
@@ -172,7 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				204EF838209B60AA00811E4C /* Spaceship.swift in Sources */,
+				E2B4815F20ADD4E1008A7C8B /* MenuViewController.swift in Sources */,
 				E274D64720AC9DC8001009A4 /* ScoreTableViewController.swift in Sources */,
 				204EF824209B597600811E4C /* AppDelegate.swift in Sources */,
 				2021E29F20AC96FB00BF1246 /* Game.swift in Sources */,

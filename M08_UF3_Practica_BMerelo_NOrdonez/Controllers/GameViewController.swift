@@ -144,6 +144,7 @@ class GameViewController: UIViewController {
                 //If gameOverDetected SHOW ALERT
 
                 if !(game.isGameRunning) {
+                    self.saveScores()
                     self.showGameAlert()
                 }
 
@@ -153,6 +154,20 @@ class GameViewController: UIViewController {
         self.game?.player?.updateLocation(self)
     }
 
+    private func saveScores(){
+        if let data = UserDefaults.standard.object(forKey: "SCORES_KEY") as? Data{
+            let decoder = PropertyListDecoder()
+            let arrScores = try? decoder.decode(HighScores.self, from: data)
+            arrScores?.addScores(newScore: self.game!.points)
+            
+            let encoder = PropertyListEncoder()
+            let data = try? encoder.encode(arrScores!)
+            UserDefaults.standard.set(data, forKey: "SCORES_KEY")
+        }
+        
+        
+    }
+    
     func gameAreaSize() -> CGSize {
         return self.view.frame.size
     }
