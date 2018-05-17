@@ -101,9 +101,35 @@
                     <view key="view" contentMode="scaleToFill" id="ngb-Hd-i6v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ao-7B-dgO">
+                                <rect key="frame" x="16" y="20" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqD-Gs-GFi">
+                                <rect key="frame" x="348" y="20" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9Ao-7B-dgO" secondAttribute="trailing" constant="20" symbolic="YES" id="1Kv-5O-h8d"/>
+                            <constraint firstItem="kqD-Gs-GFi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ngb-Hd-i6v" secondAttribute="leading" constant="20" symbolic="YES" id="1tL-TK-5rE"/>
+                            <constraint firstItem="d6U-Q9-mMJ" firstAttribute="trailing" secondItem="kqD-Gs-GFi" secondAttribute="trailing" constant="16" id="ebZ-Ca-liF"/>
+                            <constraint firstItem="kqD-Gs-GFi" firstAttribute="top" secondItem="d6U-Q9-mMJ" secondAttribute="top" id="g2a-oT-ro4"/>
+                            <constraint firstItem="9Ao-7B-dgO" firstAttribute="leading" secondItem="d6U-Q9-mMJ" secondAttribute="leading" constant="16" id="mlY-5R-zjr"/>
+                            <constraint firstItem="9Ao-7B-dgO" firstAttribute="top" secondItem="d6U-Q9-mMJ" secondAttribute="top" id="nCO-pQ-vy2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="d6U-Q9-mMJ"/>
                     </view>
+                    <connections>
+                        <outlet property="livesLabel" destination="kqD-Gs-GFi" id="CTr-1M-n4W"/>
+                        <outlet property="scoreLabel" destination="9Ao-7B-dgO" id="4dZ-pV-gT1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugH-Se-xJc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

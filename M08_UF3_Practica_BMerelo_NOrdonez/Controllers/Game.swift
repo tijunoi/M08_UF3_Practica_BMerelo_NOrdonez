@@ -17,6 +17,10 @@ class Game {
         return lives - errors
     }
 
+    var isGameOver: Bool {
+        return remainingLives < 1
+    }
+
 
     //Game logic
     var isGameRunning: Bool = true

@@ -10,6 +10,11 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    //View
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var livesLabel: UILabel!
+    
+
     var spaceshipAltitude: CGFloat = 150
     var spaceship: Spaceship?
 
@@ -123,6 +128,18 @@ class GameViewController: UIViewController {
                 //Increment step
 
                 game.stepNumber += 1
+
+                //Update View labels
+
+                scoreLabel.text = "\(game.points)"
+                livesLabel.text = "\(game.remainingLives)"
+
+
+                //Check if game is over
+
+                if game.isGameOver {
+                    game.isGameRunning = false
+                }
 
                 //If gameOverDetected SHOW ALERT
 
