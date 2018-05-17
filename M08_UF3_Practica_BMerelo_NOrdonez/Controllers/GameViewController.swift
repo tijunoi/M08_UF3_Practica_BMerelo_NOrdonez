@@ -99,7 +99,7 @@ class GameViewController: UIViewController {
             if game.isGameRunning {
 
                 //Create fruit every 5 seconds
-                if (game.stepNumber % (60 * 5) == 0) {
+                if (game.stepNumber % (60 * 3) == 0 && game.stepNumber != 0) {
                     let fruit = Fruit.generateFruit(gameAreaSize: gameAreaSize(), speed: 10) //todo: update speed acording to score
                     game.fruits.append(fruit)
                     self.view.addSubview(fruit.imageView)
