@@ -10,6 +10,11 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    //View
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var livesLabel: UILabel!
+    
+
     var spaceshipAltitude: CGFloat = 150
     var spaceship: Spaceship?
 
@@ -44,10 +49,16 @@ class GameViewController: UIViewController {
 
         if let position = position {
             self.game?.player = Player(center: position, radius: 25, imageName: "player")
+            let center = self.game?.player?.imageView.center
+            self.game?.player?.imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+            self.game?.player?.imageView.center = center!
             self.game?.player?.moveToPoint = self.game?.player?.imageView.center
         } else {
             let center = CGPoint(x: self.view.frame.midX, y: self.view.frame.maxY - spaceshipAltitude)
             self.game?.player = Player(center: center, radius: 25, imageName: "player")
+            self.game?.player?.imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+            self.game?.player?.imageView.center = center
+
             self.game?.player?.moveToPoint = self.game?.player?.imageView.center
         }
 
@@ -88,7 +99,7 @@ class GameViewController: UIViewController {
             if game.isGameRunning {
 
                 //Create fruit every 5 seconds
-                if (game.stepNumber % (60 * 5) == 0) {
+                if (game.stepNumber % (60 * 3) == 0 && game.stepNumber != 0) {
                     let fruit = Fruit.generateFruit(gameAreaSize: gameAreaSize(), speed: 10) //todo: update speed acording to score
                     game.fruits.append(fruit)
                     self.view.addSubview(fruit.imageView)
@@ -117,6 +128,18 @@ class GameViewController: UIViewController {
                 //Increment step
 
                 game.stepNumber += 1
+
+                //Update View labels
+
+                scoreLabel.text = "\(game.points)"
+                livesLabel.text = "\(game.remainingLives)"
+
+
+                //Check if game is over
+
+                if game.isGameOver {
+                    game.isGameRunning = false
+                }
 
                 //If gameOverDetected SHOW ALERT
 
