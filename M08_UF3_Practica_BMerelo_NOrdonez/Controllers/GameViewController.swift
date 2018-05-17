@@ -192,7 +192,12 @@ class GameViewController: UIViewController {
         let alertController = UIAlertController(title: "GAME OVER", message: "Your score was \(game!.points)", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "GO TO MAIN SCREEN", style: .default) {
             UIAlertAction in
-            //todo: go to main screen
+
+            if let controller = self.storyboard?.instantiateInitialViewController() {
+                self.present(controller, animated: true)
+            }
+
+
         }
         alertController.addAction(okAction)
         self.present(alertController, animated: true)
