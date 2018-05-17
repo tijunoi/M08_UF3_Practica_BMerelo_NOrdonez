@@ -26,16 +26,13 @@ class GameViewController: UIViewController {
 //        self.spaceship?.backgroundColor = UIColor.black
 //        self.spaceship!.moveToPoint = self.spaceship!.center
 //        self.view.addSubview(self.spaceship!)
-        
-        self.game = Game()
-        let center = CGPoint(x: self.view.frame.midX, y: self.view.frame.maxY - spaceshipAltitude)
-        self.game?.player = Player(center: center, radius: 25, imageName: "player")
-        self.game?.player?.moveToPoint = self.game?.player?.imageView.center
-        
-        if let imagen = self.game?.player?.imageView {
-            self.view.addSubview(imagen)
+
+        if self.game == nil {
+            self.game = Game()
+            createPlayer(nil)
         }
-        
+
+
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(tapGestureDone(_:)))
         self.view.addGestureRecognizer(panGesture)
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapGestureDone(_:)))
@@ -44,6 +41,23 @@ class GameViewController: UIViewController {
         self.view.isUserInteractionEnabled = true
         
         displayLink.add(to: .current, forMode: .defaultRunLoopMode)
+    }
+
+    private func createPlayer(_ position: CGPoint?) {
+
+        if let position = position {
+            self.game?.player = Player(center: position, radius: 25, imageName: "player")
+            self.game?.player?.moveToPoint = self.game?.player?.imageView.center
+        } else {
+            let center = CGPoint(x: self.view.frame.midX, y: self.view.frame.maxY - spaceshipAltitude)
+            self.game?.player = Player(center: center, radius: 25, imageName: "player")
+            self.game?.player?.moveToPoint = self.game?.player?.imageView.center
+        }
+
+        if let imagen = self.game?.player?.imageView {
+            self.view.addSubview(imagen)
+        }
+
     }
 
     override func didReceiveMemoryWarning() {

@@ -10,8 +10,26 @@ import UIKit
 
 class Game {
     var player: Player?
+    var points: Int = 0
+    var lives: Int = 3
+    var errors: Int = 0
+    var remainingLives: Int {
+        return lives - errors
+    }
+
     
     init() {
         
     }
+
+    func addPoint() {
+        points += 1
+    }
+
+    func addError() {
+        errors += 1
+    }
+
+
+
 }
