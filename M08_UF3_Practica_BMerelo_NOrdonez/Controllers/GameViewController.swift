@@ -26,6 +26,9 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
+
+        //NotificationCenter.default.addObserver(self, selector: #selector(guardarEstadoJuego), name: Notification.Name.UIApplicationWillResignActive, object: UIApplication.shared)
+
         if self.game == nil {
             self.game = Game()
             createPlayer(nil)
@@ -201,6 +204,16 @@ class GameViewController: UIViewController {
         }
         alertController.addAction(okAction)
         self.present(alertController, animated: true)
+    }
+
+    @objc func guardarEstadoJuego() {
+        let encoder = PropertyListEncoder()
+        //let data = try? encoder.encode(self.game!)
+        //NSKeyedArchiver.archiveRootObject(data, toFile: "RUTA")
+
+        if let nc = self.storyboard?.instantiateInitialViewController() {
+            self.present(nc, animated: true)
+        }
     }
 
 
