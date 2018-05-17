@@ -14,6 +14,8 @@ class ScoreCell: UITableViewCell{
 }
 class ScoreTableViewController: UITableViewController {
 
+    var arrScores = HighScores()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

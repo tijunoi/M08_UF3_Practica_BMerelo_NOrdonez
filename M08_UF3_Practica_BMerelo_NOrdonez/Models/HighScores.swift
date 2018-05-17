@@ -5,6 +5,21 @@
 
 import Foundation
 
-struct HighScores {
+class HighScores:Codable {
     var highscores: [Int]
+    
+    init() {
+        self.highscores = [Int]()
+    }
+    
+    func addScores(newScore: Int) {
+        highscores.append(newScore)
+        highscores.sort(){
+            $0>$1
+        }
+        while highscores.count>10{
+            highscores.remove(at: 10)
+        }
+    }
 }
+
