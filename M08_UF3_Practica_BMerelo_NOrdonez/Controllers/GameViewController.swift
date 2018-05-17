@@ -44,10 +44,16 @@ class GameViewController: UIViewController {
 
         if let position = position {
             self.game?.player = Player(center: position, radius: 25, imageName: "player")
+            let center = self.game?.player?.imageView.center
+            self.game?.player?.imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+            self.game?.player?.imageView.center = center!
             self.game?.player?.moveToPoint = self.game?.player?.imageView.center
         } else {
             let center = CGPoint(x: self.view.frame.midX, y: self.view.frame.maxY - spaceshipAltitude)
             self.game?.player = Player(center: center, radius: 25, imageName: "player")
+            self.game?.player?.imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+            self.game?.player?.imageView.center = center
+
             self.game?.player?.moveToPoint = self.game?.player?.imageView.center
         }
 
