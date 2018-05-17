@@ -65,11 +65,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="HighScores" id="TzS-AN-lQB">
-                                    <barButtonItem key="leftBarButtonItem" systemItem="reply" id="jVt-aR-fQb">
-                                        <connections>
-                                            <segue destination="etB-cN-fPc" kind="unwind" unwindAction="goBackWithSegue:" id="SFP-7L-BXu"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem key="leftBarButtonItem" systemItem="reply" id="jVt-aR-fQb"/>
                                 </navigationItem>
                             </items>
                         </navigationBar>
@@ -107,9 +103,8 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sln-cW-bjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="etB-cN-fPc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1586" y="30"/>
+            <point key="canvasLocation" x="1639" y="117"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="xY7-fp-Sg8">
