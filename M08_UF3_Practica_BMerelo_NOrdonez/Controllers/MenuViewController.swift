@@ -16,7 +16,7 @@ class MenuViewController: UIViewController {
         //Comprovamos si existe historial de puntuaciones en el dispositivo
         if let data = UserDefaults.standard.object(forKey: "SCORES_KEY") as? Data {
             let decoder = PropertyListDecoder()
-            let arrScores = try? decoder.decode(HighScores.self, from: data)
+            let _ = try? decoder.decode(HighScores.self, from: data)
         } else {
             //Si no existen highscores en el dispositivo se inicializan
             let scores = HighScores()
