@@ -157,6 +157,7 @@ class GameViewController: UIViewController {
     }
 
     private func saveScores(){
+
         if let data = UserDefaults.standard.object(forKey: "SCORES_KEY") as? Data{
             let decoder = PropertyListDecoder()
             let arrScores = try? decoder.decode(HighScores.self, from: data)
@@ -166,8 +167,6 @@ class GameViewController: UIViewController {
             let data = try? encoder.encode(arrScores!)
             UserDefaults.standard.set(data, forKey: "SCORES_KEY")
         }
-        
-        
     }
     
     func gameAreaSize() -> CGSize {
@@ -221,7 +220,7 @@ class GameViewController: UIViewController {
     }
 
     @objc func guardarEstadoJuego() {
-        let encoder = PropertyListEncoder()
+        //let encoder = PropertyListEncoder()
         //let data = try? encoder.encode(self.game!)
         //NSKeyedArchiver.archiveRootObject(data, toFile: "RUTA")
 

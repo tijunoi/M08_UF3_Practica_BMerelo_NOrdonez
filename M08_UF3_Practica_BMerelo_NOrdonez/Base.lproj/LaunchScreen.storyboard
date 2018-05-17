@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,13 +17,103 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="bI3-bp-0TP">
+                                <rect key="frame" x="90" y="364" width="195" height="192"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="Qce-hz-wvK">
+                                <rect key="frame" x="254" y="182" width="71" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="3cE-WC-pXz"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grape" translatesAutoresizingMaskIntoConstraints="NO" id="CgL-Ib-Oj5">
+                                <rect key="frame" x="45" y="257" width="88" height="72"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orange" translatesAutoresizingMaskIntoConstraints="NO" id="oV8-gc-XJc">
+                                <rect key="frame" x="43" y="182" width="93" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="TuF-0f-jPg"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pear" translatesAutoresizingMaskIntoConstraints="NO" id="880-2V-MFb">
+                                <rect key="frame" x="151" y="257" width="70" height="72"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="raspberry" translatesAutoresizingMaskIntoConstraints="NO" id="29H-OV-zWG">
+                                <rect key="frame" x="151" y="182" width="70" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="KhS-Cr-Swx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="strawberry" translatesAutoresizingMaskIntoConstraints="NO" id="9xi-gR-hUk">
+                                <rect key="frame" x="78" y="106" width="113" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="rKm-kc-2N4"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="watermelon" translatesAutoresizingMaskIntoConstraints="NO" id="rl6-CV-VYk">
+                                <rect key="frame" x="247" y="265" width="84" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="ZDb-oN-HeE"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cherry" translatesAutoresizingMaskIntoConstraints="NO" id="1a6-cY-pLK">
+                                <rect key="frame" x="199" y="106" width="75" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="bw1-Ev-u8F"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1a6-cY-pLK" secondAttribute="trailing" constant="101" id="27m-1x-c2j"/>
+                            <constraint firstItem="CgL-Ib-Oj5" firstAttribute="bottom" secondItem="880-2V-MFb" secondAttribute="bottom" id="9jP-Db-kH3"/>
+                            <constraint firstItem="1a6-cY-pLK" firstAttribute="leading" secondItem="9xi-gR-hUk" secondAttribute="trailing" constant="8" symbolic="YES" id="A4k-Jh-22L"/>
+                            <constraint firstItem="9xi-gR-hUk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="86" id="APg-f7-i7P"/>
+                            <constraint firstItem="CgL-Ib-Oj5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="HOl-r7-53W"/>
+                            <constraint firstItem="bI3-bp-0TP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="JEu-Tj-PCk"/>
+                            <constraint firstItem="bI3-bp-0TP" firstAttribute="top" secondItem="CgL-Ib-Oj5" secondAttribute="bottom" constant="35" id="K5g-Hq-RpV"/>
+                            <constraint firstItem="oV8-gc-XJc" firstAttribute="centerX" secondItem="CgL-Ib-Oj5" secondAttribute="centerX" id="LVc-ap-1ID"/>
+                            <constraint firstItem="oV8-gc-XJc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="O2s-x1-LUg"/>
+                            <constraint firstItem="rl6-CV-VYk" firstAttribute="top" secondItem="Qce-hz-wvK" secondAttribute="bottom" constant="16" id="OvH-eK-WKB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bI3-bp-0TP" secondAttribute="bottom" constant="111" id="PHt-3c-YhB"/>
+                            <constraint firstItem="29H-OV-zWG" firstAttribute="top" secondItem="1a6-cY-pLK" secondAttribute="bottom" constant="8" symbolic="YES" id="Q42-Jl-6Jq"/>
+                            <constraint firstItem="Qce-hz-wvK" firstAttribute="leading" secondItem="29H-OV-zWG" secondAttribute="trailing" constant="33" id="QF5-3k-NST"/>
+                            <constraint firstItem="29H-OV-zWG" firstAttribute="top" secondItem="Qce-hz-wvK" secondAttribute="top" id="U1Y-q9-0HN"/>
+                            <constraint firstItem="29H-OV-zWG" firstAttribute="leading" secondItem="oV8-gc-XJc" secondAttribute="trailing" constant="15" id="UtW-QR-kXS"/>
+                            <constraint firstItem="Qce-hz-wvK" firstAttribute="centerX" secondItem="rl6-CV-VYk" secondAttribute="centerX" id="VrI-2K-CYg"/>
+                            <constraint firstItem="9xi-gR-hUk" firstAttribute="top" secondItem="1a6-cY-pLK" secondAttribute="top" id="WWx-h4-hzY"/>
+                            <constraint firstItem="9xi-gR-hUk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="YtJ-Va-RLo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rl6-CV-VYk" secondAttribute="trailing" constant="44" id="ZXI-CT-iG8"/>
+                            <constraint firstItem="29H-OV-zWG" firstAttribute="bottom" secondItem="Qce-hz-wvK" secondAttribute="bottom" id="ZfT-of-2T0"/>
+                            <constraint firstItem="rl6-CV-VYk" firstAttribute="leading" secondItem="880-2V-MFb" secondAttribute="trailing" constant="26" id="boX-is-ZfX"/>
+                            <constraint firstItem="880-2V-MFb" firstAttribute="top" secondItem="29H-OV-zWG" secondAttribute="bottom" constant="8" symbolic="YES" id="eQk-jo-YE0"/>
+                            <constraint firstItem="29H-OV-zWG" firstAttribute="trailing" secondItem="880-2V-MFb" secondAttribute="trailing" id="hBD-qL-efk"/>
+                            <constraint firstItem="29H-OV-zWG" firstAttribute="leading" secondItem="880-2V-MFb" secondAttribute="leading" id="nK3-kb-nqZ"/>
+                            <constraint firstItem="880-2V-MFb" firstAttribute="centerY" secondItem="rl6-CV-VYk" secondAttribute="centerY" id="sLe-xC-w1Z"/>
+                            <constraint firstItem="CgL-Ib-Oj5" firstAttribute="top" secondItem="880-2V-MFb" secondAttribute="top" id="vFL-cY-uWE"/>
+                            <constraint firstItem="9xi-gR-hUk" firstAttribute="centerY" secondItem="1a6-cY-pLK" secondAttribute="centerY" id="vLt-23-IRy"/>
+                            <constraint firstItem="bI3-bp-0TP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="vfW-CF-XuD"/>
+                            <constraint firstItem="CgL-Ib-Oj5" firstAttribute="top" secondItem="oV8-gc-XJc" secondAttribute="bottom" constant="8" symbolic="YES" id="waH-Xz-4m3"/>
+                            <constraint firstItem="oV8-gc-XJc" firstAttribute="top" secondItem="29H-OV-zWG" secondAttribute="top" id="wiu-ZZ-9rk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="apple" width="263" height="240"/>
+        <image name="cherry" width="251" height="240"/>
+        <image name="grape" width="400" height="400"/>
+        <image name="orange" width="245" height="240"/>
+        <image name="pear" width="148" height="240"/>
+        <image name="player" width="183" height="183"/>
+        <image name="raspberry" width="222" height="240"/>
+        <image name="strawberry" width="202" height="240"/>
+        <image name="watermelon" width="257" height="240"/>
+    </resources>
 </document>

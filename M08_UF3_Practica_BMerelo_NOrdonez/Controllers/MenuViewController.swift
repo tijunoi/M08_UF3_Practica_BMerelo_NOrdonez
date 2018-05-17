@@ -13,7 +13,17 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //Comprovamos si existe historial de puntuaciones en el dispositivo
+        if let data = UserDefaults.standard.object(forKey: "SCORES_KEY") as? Data {
+            let decoder = PropertyListDecoder()
+            let arrScores = try? decoder.decode(HighScores.self, from: data)
+        } else {
+            //Si no existen highscores en el dispositivo se inicializan
+            let scores = HighScores()
+            let encoder = PropertyListEncoder()
+            let data = try? encoder.encode(scores)
+            UserDefaults.standard.set(data, forKey: "SCORES_KEY")
+        }
     }
 
     override func didReceiveMemoryWarning() {
