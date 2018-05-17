@@ -27,6 +27,7 @@ class Fruit: Actor {
         newCenter.y = newCenter.y + self.speed
         self.imageView.center = newCenter
         if (newCenter.y - self.radius) > controller.gameAreaSize().height {
+            //todo: restar puntuacion
             controller.removeActor(self)
         }
     }

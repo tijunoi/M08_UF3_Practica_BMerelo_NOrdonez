@@ -35,6 +35,7 @@ class Player: Actor{
     }
 
     func afterCollision(actor: Actor, controller: GameViewController) {
+        //todo: add pounts to user
         controller.removeActor(actor)
     }
 }

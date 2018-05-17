@@ -17,6 +17,14 @@ class Game {
         return lives - errors
     }
 
+
+    //Game logic
+    var isGameRunning: Bool = true
+    var stepNumber: Int = 0
+
+    var fruits: [Actor] = [Actor]()
+    var toBeRemoved: [Actor] = [Actor]()
+
     
     init() {
         
