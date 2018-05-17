@@ -16,7 +16,6 @@ class GameViewController: UIViewController {
     
 
     var spaceshipAltitude: CGFloat = 150
-    var spaceship: Spaceship?
 
     var game: Game?
     //Guardamos el display link para poder acceder en cada momento al frame rate, ya que varía segun el estado del dispositivo
